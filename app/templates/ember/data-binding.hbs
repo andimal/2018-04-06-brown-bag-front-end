@@ -1,0 +1,36 @@
+<div class="basic ui segment">
+  <h2 class="ui header">Data Binding</h2>
+
+  <div>
+    <div class="ui input">
+      {{input value=dataBinding placeholder="Typey typey..."}}
+    </div><br>
+    You entered: <strong>{{dataBinding}}</strong>
+  </div>
+  <hr>
+  {{#ui-accordion class="dev-tools-accordion styled"}}
+    <div class="title">
+      Server data
+    </div>
+    <div class="content">
+      <h3 class="ui header">Meters</h3>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+        </tr>
+        {{#if model.length}}
+          {{#each model as |meter|}}
+            <tr>
+              <td>{{meter.id}}</td>
+              <td>{{meter.name}}</td>
+            </tr>
+          {{/each}}
+        {{else}}
+          <i>No meters!</i>
+        {{/if}}
+      </table>
+      <button class="large ui button blue" {{action "getTheMeters"}}>Get the meters!</button>
+    </div>
+  {{/ui-accordion}}
+</div>

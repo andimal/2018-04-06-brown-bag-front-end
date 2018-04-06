@@ -1,0 +1,38 @@
+<div class="page-table-layout basic ui segment">
+  <h2 class="ui header">Developer Tools</h2>
+  <button class="large ui button blue" {{action "showMeters"}}>Show meters!</button><br><br>
+
+  {{#each displayData as |d|}}
+    {{d}}<br>
+  {{/each}}
+
+  <hr>
+
+  <ul>
+    <li>console.log</li>
+    <li>debugger</li>
+    <li>
+      js
+      <ul>
+        <li>
+          <a target="_blank" href="https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference">
+            https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>html</li>
+    <li>css</li>
+  </ul>
+
+  <hr>
+
+  {{#ui-accordion class="dev-tools-accordion styled"}}
+    <div class="title">
+      Play time!
+    </div>
+    <div class="content">
+      <iframe src="//gridium.com"></iframe>
+    </div>
+  {{/ui-accordion}}
+</div>

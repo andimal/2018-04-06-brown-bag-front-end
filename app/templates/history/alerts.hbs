@@ -1,0 +1,10 @@
+<div class="page-table-layout basic ui segment">
+  <h2 class="ui header">Alerts</h2>
+  <button class="large ui button blue" {{action "showMeters"}}>Show meters!</button><br><br>
+
+  {{#each displayData as |d|}}
+    {{d}}<br>
+  {{/each}}<br><br>
+
+  <button class="large ui button red" {{action "engageDebugging"}}>Engage debugging!</button>
+</div>

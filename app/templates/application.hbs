@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="ui bottom attached segment pushable">
+  <div class="ui visible inverted left vertical sidebar menu">
+    {{#link-to "index" class="item"}}Brown Bag - FE Dev - 2018-04-06{{/link-to}}
 
-{{outlet}}
+    <div class="item">
+      {{#link-to "history" class="header"}}History{{/link-to}}
+      <div class="menu">
+        {{#link-to "history.table-layout" class="item"}}Table Layout{{/link-to}}
+        {{#link-to "history.alerts" class="item"}}Alerts{{/link-to}}
+        {{#link-to "history.developer-tools" class="item"}}Developer Tools{{/link-to}}
+      </div>
+    </div>
+
+    {{#link-to "sass" class="item header"}}Sass{{/link-to}}
+
+    <div class="item">
+      {{#link-to "ember" class="header"}}Ember{{/link-to}}
+      <div class="menu">
+        {{#link-to "ember.convention-over-configuration" class="item"}}Convention Over Configuration{{/link-to}}
+        {{#link-to "ember.cli" class="item"}}CLI{{/link-to}}
+        {{#link-to "ember.data-binding" class="item"}}Data Binding{{/link-to}}
+        {{#link-to "ember.addons" class="item"}}Addons{{/link-to}}
+        {{#link-to "ember.inspector" class="item"}}Inspector{{/link-to}}
+      </div>
+    </div>
+  </div>
+  <div class="pusher">
+    {{outlet}}
+  </div>
+</div>

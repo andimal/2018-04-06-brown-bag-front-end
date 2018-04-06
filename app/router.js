@@ -7,6 +7,20 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('history', function() {
+    this.route('table-layout');
+    this.route('alerts');
+    this.route('developer-tools');
+  });
+  this.route('sass');
+
+  this.route('ember', function() {
+    this.route('convention-over-configuration');
+    this.route('cli');
+    this.route('data-binding');
+    this.route('addons');
+    this.route('inspector');
+  });
 });
 
 export default Router;

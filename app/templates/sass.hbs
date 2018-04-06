@@ -1,0 +1,37 @@
+<div class="basic ui segment">
+  <h1 class="ui header">Sass</h1>
+</div>
+
+<div class="basic ui segment">
+  <h2 class="ui header">Variables</h2>
+  <pre><code>
+    $gridium-orange: #e2670f;
+    h1 { color: $gridium-orange; }
+    div.highlight { background-color: $gridium-orange; }
+  </code></pre>
+  <hr>
+  <h2 class="ui header">Imports</h2>
+  <pre><code>
+    @import 'components/chart/div-legend';
+    @import 'components/chart/chart-loading';
+    @import 'components/chart/chart-loading-overlay';
+    @import 'components/chart/monthly-bill-cost';
+  </code></pre>
+  <hr>
+  <h2 class="ui header">Mixins</h2>
+  <pre><code>
+    @mixin media-xs {
+      @media screen and (max-width: $screen-sm - 1)
+        @content;
+      }
+    }
+
+    h1 {
+      color: black;
+
+      @include media-xs {
+        color: $gridium-orange;
+      }
+    }
+  </code></pre>
+</div>
